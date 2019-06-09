@@ -23,7 +23,6 @@
 | password | string | null: false               |
 
 ### Association
-- belongs_to :group
 - has_many :messages
 - has_many :groups, through: :members
 
@@ -36,7 +35,7 @@
 | name   | string | null: false |
 
 ### Association
-- belongs_to :user
+- has_many :messages
 - has_many :users, through: :members
 
 ---
@@ -51,3 +50,4 @@
 
 ### Association
 - belongs_to :user
+- belongs_to :group
