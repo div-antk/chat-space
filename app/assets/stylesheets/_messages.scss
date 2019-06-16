@@ -1,0 +1,20 @@
+.chat {
+  &__name {
+    display: inline-block;
+    font-weight: bold;
+    color: #434a54;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  &__daydate {
+    display: inline-block;
+    color: #999999;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  &__text {
+    color: #434a54;
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+}
