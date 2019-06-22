@@ -1,5 +1,11 @@
-@import "reset";
+@import "font-awesome";
+@import "config/reset";
+@import "side_bar";
 @import "variable.scss";
 @import "index";
 @import "messages";
-@import "font-awesome";
+@import "user";
+@import "config/colors";
+@import "modules/flash";
+@import "modules/group";
+@import "reset";
