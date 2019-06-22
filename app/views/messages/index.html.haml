@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+%html
+  %head
+    %meta(charset="UTF-8")
+  %body
+
+  .Chat-side
+    #{render :partial => "/devise/shared/side_bar"} 
+    -# .Side-head
+    -#   .Side-head__box
+    -#     .Side-head__box-name
+    -#       = current_user.name
+    -#     .Side-head__box-icon
+    -#       .Side-head__box-icon-edit
+    -#         = link_to 'https://kotobank.jp/word/%E6%96%B0%E8%A6%8F-536885', class: "Side-head__box-icon-edit" do
+    -#           = fa_icon 'edit'
+    -#       .Side-head__box-icon-cog
+    -#         = link_to 'https://ja.wikipedia.org/wiki/%E7%B7%A8%E9%9B%86', class: "Side-head__box-icon-cog" do
+    -#           = fa_icon 'cog'
+    -# .Side-group
+    -#   -# グループは変数で定義する
+    -#   .Side-group__name
+    -#     令和生まれ猟友会
+    -#   .Side-group__message
+    -#     カバのジビエ
+    -#   .Side-group__name
+    -#     みそにこみうどん
+    -#   .Side-group__message
+    -#     わかります
+    -#   .Side-group__name
+    -#     おたく友の会
+    -#   .Side-group__message
+    -#     ういまご
+
+  .Main
+    .Main__head
+      .Main__head-group
+        .Main__head-group-name
+          52期夜間テニスサークル
+        .Main__head-group-member
+          Member：たくや
+      .Main__head-edit
+        Edit
+    .Main__chat
+      .Main__chat-message
+        #{render :partial => "messages/messages"} 
+    .Main__form
+      .Main__form-box
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'form__message', placeholder: 'なにか言ってください'
+          .form__mask
+            = f.label :image, class: 'form__mask__image' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'おくる', class: 'form__submit'
+      
+      -# .Main__form-box-icon
+      -#   %label.upload-label{for: "upload-icon"}
+      -#     %i.fa.fa-image
+      -#     %input{type: "file", style: "display: none", id: "upload-icon"}
+      -# .Main__form-send
+      -#   おくる
+
+
+      #{yield :layout}
