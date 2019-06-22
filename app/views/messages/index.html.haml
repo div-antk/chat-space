@@ -43,7 +43,7 @@
         Edit
     .Main__chat
       .Main__chat-message
-        #{render :partial => "messages/messages"} 
+        = render @messages 
     .Main__form
       .Main__form-box
         = form_for [@group, @message] do |f|
