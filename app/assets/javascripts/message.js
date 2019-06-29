@@ -1,5 +1,5 @@
 $(function(){
-  // function buildMessage(post){
+  // function buildHTML(post){
   //   var html =`<div class='message'>
   //                 <div class='upper-message'>
   //                   <div class='upper-message__user-name'>
@@ -18,24 +18,28 @@ $(function(){
   //               </div>`
   //   return html;
   // };
-  
+
   $('#new_message').on('form__submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
-    var url = $(this).attr('action')
+    // var url = $(this).attr('action');
+    var href = window.location.href
     $.ajax({
       url: url,
-      type: "POST",
+      type: 'POST',
       data: formData,
       dataType: json,
       processData: false,
-      contenTyple: false,
+      contenTyple: false
     })
     .done(function(message){
-      console.log(message.content);
-      var html = buildMessage(message);
-      $('')
+      console.log("( ´∀｀)");
+      var html = buildHTML(message);
+      $('.message').append(html);
+      $('content').val('')
     })
-    
+    .fail(function(){
+      alert('エラー');
+    })
   })
 });
