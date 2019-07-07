@@ -6,7 +6,6 @@
   .Chat-side
     #{render :partial => "/devise/shared/side_bar"} 
 
-
   .Main
     .Main__head
       .Main__head-group
@@ -31,13 +30,5 @@
               = fa_icon 'picture-o', class: 'icon'
               = f.file_field :image, class: 'hidden'
           = f.submit 'おくる', class: 'form__submit'
-      
-      -# .Main__form-box-icon
-      -#   %label.upload-label{for: "upload-icon"}
-      -#     %i.fa.fa-image
-      -#     %input{type: "file", style: "display: none", id: "upload-icon"}
-      -# .Main__form-send
-      -#   おくる
-
 
       #{yield :layout}
