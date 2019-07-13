@@ -52,7 +52,6 @@ $(function(){
     $input = $(this);
     var add_user_html = clickHTML($input);
     $("#search-users").append(add_user_html);
-    // console.log($input.parent());
       $input.parent()[0].remove();
   });
 
