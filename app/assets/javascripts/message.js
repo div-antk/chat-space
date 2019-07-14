@@ -62,8 +62,6 @@ $(function(){
       })
 
       .done(function(messages) {
-        console.log("ダンをとっている");
-        console.log(last_message_id);
         var insertHTML = '';
 
         messages.forEach(function(message) {
