@@ -4,7 +4,7 @@
   %body
 
   .Chat-side
-    #{render :partial => "/devise/shared/side_bar"} 
+    = render "/devise/shared/side_bar"
 
   .Main
     .Main__head
@@ -30,5 +30,3 @@
               = fa_icon 'picture-o', class: 'icon'
               = f.file_field :image, class: 'hidden'
           = f.submit 'おくる', class: 'form__submit'
-
-      #{yield :layout}
