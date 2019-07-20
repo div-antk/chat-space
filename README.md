@@ -1,6 +1,6 @@
 # DB設計
 
-## membersテーブル
+## group_usersテーブル
 <!-- 中間テーブル -->
 
 | Column   | Type      | Options                        |
@@ -24,8 +24,8 @@
 
 ### Association
 - has_many :messages
-- has_many :members
-- has_many :groups, through: :members
+- has_many :group_users
+- has_many :groups, through: :group_users
 なにか
 
 ---
@@ -38,8 +38,8 @@
 
 ### Association
 - has_many :messages
-- has_many :members
-- has_many :users, through: :members
+- has_many :group_users
+- has_many :users, through: :group_users
 
 ---
 

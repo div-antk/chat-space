@@ -39,7 +39,7 @@ $(function(){
 
   function clickHTML(user){
     var userId = user.attr("data-user-id");
-    var html = `<div class='chat-group-user clearfix js-chat-member' id='${userId}'
+    var html = `<div class='chat-group-user clearfix js-chat-member' id='${userId}'>
                   <input name='group[user_ids][]' type='hidden' value="${userId}">
                   <p class='chat-group-user__name'>${user.attr("data-user-name")}</p>
                   <p class='user-search-remove chat-group-user__btn chat-group-user__btn--remove' js-remove-btn'>消す</a>
